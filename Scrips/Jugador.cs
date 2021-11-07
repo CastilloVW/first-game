@@ -143,7 +143,7 @@ public class Jugador : MonoBehaviour
         /*Animación de movimiento*/
 
         //Si presiono W o S y luego shift entonces Corro o atras
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.LeftControl))
         {
 
             if (Input.GetKey(KeyCode.W))
@@ -174,7 +174,7 @@ public class Jugador : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.W))
         {
 
-            if (Input.GetKey(KeyCode.P))
+            if (Input.GetKey(KeyCode.LeftControl))
             {
 
                 animator.SetBool("Correr", true);
@@ -192,7 +192,7 @@ public class Jugador : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.S))
         {
 
-            if (Input.GetKey(KeyCode.P))
+            if (Input.GetKey(KeyCode.LeftControl))
             {
 
                 animator.SetBool("atras", true);
@@ -208,7 +208,7 @@ public class Jugador : MonoBehaviour
         }
 
 
-        if (Input.GetKeyUp(KeyCode.P) || Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S))
+        if (Input.GetKeyUp(KeyCode.LeftControl) || Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S))
         {
             rotationSpeed = 200;
             runSpeed = 2.0f;
